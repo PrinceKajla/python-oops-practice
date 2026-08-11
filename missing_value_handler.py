@@ -26,9 +26,6 @@ class MissingValueHandler:
     def count_missing(self):
         return len(self.find_missing_indexes())
 
-    # -----------------------------
-    # Get Available Values
-    # -----------------------------
     def get_available_values(self):
         available_values = []
 
@@ -38,9 +35,6 @@ class MissingValueHandler:
 
         return available_values
 
-    # -----------------------------
-    # Calculate Mean Manually
-    # -----------------------------
     def calculate_mean(self):
         available_values = self.get_available_values()
 
@@ -58,9 +52,6 @@ class MissingValueHandler:
 
         return mean
 
-    # -----------------------------
-    # Fill Missing Values with Mean
-    # -----------------------------
     def fill_with_mean(self):
         mean = self.calculate_mean()
 
@@ -74,10 +65,6 @@ class MissingValueHandler:
 
         return cleaned_data
 
-    # -----------------------------
-    # Fill Missing Values with Median
-    # Bonus
-    # -----------------------------
     def fill_with_median(self):
         available_values = self.get_available_values()
 
@@ -108,10 +95,6 @@ class MissingValueHandler:
 
         return cleaned_data
 
-    # -----------------------------
-    # Fill Missing Values with Zero
-    # Bonus
-    # -----------------------------
     def fill_with_zero(self):
         cleaned_data = self.data.copy()
 
@@ -123,10 +106,6 @@ class MissingValueHandler:
 
         return cleaned_data
 
-    # -----------------------------
-    # General Strategy Method
-    # Bonus
-    # -----------------------------
     def fill_missing_values(self, strategy):
         strategy = strategy.lower()
 
@@ -144,9 +123,6 @@ class MissingValueHandler:
                 "Invalid strategy. Use 'mean', 'median', or 'zero'."
             )
 
-    # -----------------------------
-    # Display Report
-    # -----------------------------
     def display_report(self):
         self.validate_data()
 
