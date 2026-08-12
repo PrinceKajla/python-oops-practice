@@ -4,12 +4,12 @@ class MissingValueHandler:
         self.cleaned_data = None
 
     def validate_data(self):
+            raise ValueError("Input list cannot be empty.")
+
         if not isinstance(self.data, list):
             raise TypeError("Input must be a list.")
 
         if len(self.data) == 0:
-            raise ValueError("Input list cannot be empty.")
-
         for value in self.data:
             if value is not None and not isinstance(value, (int, float)):
                 raise TypeError("Dataset contains invalid values.")
