@@ -1,27 +1,4 @@
-"""
-NumPy-Based Feature Processing Module
-=====================================
-Task ID: ML-NP-007
-Difficulty: Intermediate + 5%
-
-This module implements a NumpyFeatureProcessor class that provides
-efficient numerical data processing and transformation using NumPy.
-
-Key Features:
-- Array conversion and introspection
-- Statistical calculations (min, max, mean, std)
-- Min-Max Scaling (normalization)
-- Z-Score Standardization
-- Comprehensive error handling
-- Vectorized numerical operations
-
-Author: Data Science Team
-Date: 2026
-"""
-
 import numpy as np
-
-
 class NumpyFeatureProcessor:
     """
     A class for processing numerical data using NumPy.
